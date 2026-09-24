@@ -1,4 +1,3 @@
-Aquí tienes el bloque de código con el botón de copiar para que pegues el texto sin formato directamente en tu archivo `README.md`:
 
 ```text
 # 📄 Proyecto de Reportes en LaTeX
