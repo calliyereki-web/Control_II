@@ -1,0 +1,9 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Lazo de retroalimentación simple \citep {notasclase}.}}{4}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Diagrama de bloques con varios lazos de retroalimentación.}}{4}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Diagrama de bloques con varios lazos de retroalimentación a la mitad de tamaño.}}{4}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Escudos.}}{5}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Escudos al doble de tamaño y sin salirse de la caja.}}{5}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Diagrama para simulación del sistema en lazo cerrado con $K_p=3.18$ para $r=\pi \ [rad]$ en simulink.}}{5}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Respuesta temporal en simulación del sistema en lazo cerrado con $K_p=3.18$ para $r=\pi \ [rad]$.}}{6}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Respuesta temporal experimental del sistema en lazo cerrado con $K_p=3.18$ para $r=\pi \ [rad]$.}}{6}{figure.8}%

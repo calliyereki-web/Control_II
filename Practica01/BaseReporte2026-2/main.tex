@@ -1,0 +1,404 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+% Idioma sin shorthands conflictivos para bibpunct
+\usepackage[spanish,es-noshorthands]{babel} 
+\spanishdecimal.
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{times}
+\usepackage{natbib}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{graphics}
+%\usepackage[sf,bf,tiny,center,compact]{titlesec}
+%Cambiar quizá por sub Caption
+%\usepackage{subfigure}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{hyphenat}
+\usepackage{tikz}
+\usepackage{blox}
+\hyphenation{co-mer-cial rea-li-zan si-guien-te si-mu-la-ción ke-lly con-si-de-ra-da}
+\AtBeginDocument{\bibpunct{(}{)}{;}{a}{,}{,}}
+
+%Variables Comúnes:
+\newcommand{\EstudianteA}{Calli Yereki Peña Pérez}
+\newcommand{\EstudianteB}{Aaron Emmanuel Trejo Jotolín}
+\newcommand{\EstudianteC}{Dani}
+\newcommand{\EstudianteD}{Kevini}
+\newcommand{\EstudianteE}{Ivancini}
+\newcommand{\EstudianteF}{Dieguini}
+\newcommand{\NumeroPractica}{67}
+\newcommand{\TituloPractica}{LonemInsumLONenISu}
+\newcommand{\FechaCompromiso}{67 de mayo de 6767}
+\newcommand{\FechaEntrega}{\today}
+
+\begin{document}
+
+%portada
+\begin{titlepage}
+\centering
+	\begin{figure}
+  \begin{minipage}{1\linewidth}
+     \centering\centering%\rule{2cm}{2cm}
+    % \caption{Primera figura}
+    \includegraphics[width=0.3\textwidth]{img/logos_fi_uaq.png}
+     
+  \end{minipage}
+\end{figure}
+{\scshape\LARGE Universidad Autónoma de Querétaro \par}
+	\vspace{0.5cm}
+	{\scshape\Large Facultad de Ingeniería \par}
+	\vspace{0.5cm}
+	{\scshape\Large Ingeniería en Automatización \par}
+	\vspace{0.5cm}	
+	{\Large\bfseries Control II\par}
+	\vspace{0.8cm}
+	{\Large\bfseries \TituloPractica \\ \par}	
+	\vspace{0.8cm}
+	{\Large\itshape Práctica \NumeroPractica\par}
+	\vspace{0.8cm}
+	Profesor: \par
+	Dr. Roberto Valentín Carrillo Serrano \par
+	\vspace{0.5cm}
+	Equipo 1\par \vspace{0.2cm}
+	Integrantes:\vspace{0.4cm}
+\par	
+	\EstudianteA \hfill \rule{70mm}{0.1mm}
+\vspace{0.4cm}
+\par    
+    \EstudianteB \hfill \rule{70mm}{0.1mm}
+\vspace{0.4cm}
+\par
+    \EstudianteC \hfill \rule{70mm}{0.1mm}
+\vspace{0.4cm}
+\par
+    \EstudianteD \hfill \rule{70mm}{0.1mm}
+\vspace{0.4cm}
+\par
+    \EstudianteE \hfill \rule{70mm}{0.1mm}
+\vspace{0.4cm}
+\par
+    \EstudianteF \hfill \rule{70mm}{0.1mm}
+
+\par
+	
+		
+	\vfill
+
+% Bottom of the page
+	{\large Fecha compromiso: \FechaCompromiso\par
+    Fecha en que se entregó: \FechaEntrega}.
+\end{titlepage}
+
+%\frontmatter	%fija la numeración romana
+\thispagestyle{empty}%no imprimir número de página en índice
+\tableofcontents
+\listoffigures
+\listoftables
+%\printindex
+\newpage
+%\setcounter{page}{1}
+%\mainmatter 	%fija la numeración arábiga
+
+
+
+\section{Objetivo}
+Construir un filtro RC pasa bajas de primer orden y un filtro RC pasa altas de primer orden para ver su respuesta en frecuencia en el osciloscopio, graficando el comportamiento de la magnitud y de la fase ante una señal sinusoidal de entrada con una amplitud constante y diferentes frecuencias
+
+\section{Marco Teórico}
+Si a un sistema $G(s)$ cualquiera le aplicamos en la entrada una señal en forma de seno o coseno, la manera en que cambian la amplitud y la fase de la señal de salida depende de cómo son y en dónde están ubicados los polos y ceros de la función de transferencia de nuestra planta (\cite{notasclase}). 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{img/entrada_salida.png}
+    \caption{Relación entre la amplitud y fase de las señales de entrada y salida}
+    \label{fig:vi_vo}
+\end{figure}
+
+La idea básica de la respuesta en frecuencia es que si se le aplica una entrada sinusoidal cualquiera, $v_i$, el cual está representado por:
+
+\begin{equation}
+	v_i = Asen(wt)
+	\label{eq:entrada_vi}
+\end{equation}
+
+Donde $w$ es la frecuencia en $[\frac{rad}{s}]$.
+En la salida del sistema obtendremos una señal sinusoidal la cual dependiendo de la función de transferencia, saldrá con otra amplitud y una fase distinta con relación con la señal aplicada a la entrada, la cual podemos representar como: 
+
+\begin{equation}
+    v_o=Bsen(wt+\phi )
+    \label{eq:salida_vo}
+\end{equation}
+
+Donde $\phi$ es el ángulo de fase o simplemente la fase y se obtiene a partir de la siguiente ecuación:
+
+\begin{equation}
+    \phi = \frac{360\,[^\circ]}{T}t_\phi
+    \label{eq:phi}
+\end{equation}
+
+\subsection{Filtro RC pasa bajas}
+En la Figura~\ref{fig:RC_pasabajas} se presenta el diagrama de un experimento de un circuito RC (configuración pasa bajas) de corriente alterna.
+
+\begin{figure}[H]
+\centering
+    \includegraphics[width=0.4\linewidth]{img/Circuito_RC.png}
+    \caption{Diagrama del circuito RC.}
+    \label{fig:RC_pasabajas}
+\end{figure}
+
+Donde sus voltajes de entrada y de salida están dados por:
+
+\begin{equation}
+    v_i = Ri+\frac{1}{c}\int_{0}^{t}i(\tau)d\tau, \quad v_o = \frac{1}{c}\int_{0}^{t}i(\tau)d\tau
+    \label{eq:voltajes_entrada_salida}
+\end{equation}
+
+Pasando a Laplace tenemos:
+
+\begin{equation}
+    V_i(s) = RI(s)+\frac{1}{C}*\frac{1}{s}I(s), \quad V_o(s) = \frac{1}{Cs}I(s)
+    \label{eq:voltajes_entrada_salida_laplace}
+\end{equation}
+
+Finalmente, la función de transferencia en el dominio de Laplace se representa como: 
+
+\begin{equation}
+    G(s) = \frac{V_o(s)}{V_i(s)} = \frac{1}{RCs+1} = \frac{a}{s+a}
+    \label{eq:Fun_transf_pasabajas}
+\end{equation}
+
+Donde para la forma polo-cero: 
+
+\begin{equation}
+    a = \frac{1}{RC}
+    \label{eq:polo-cero-pb}
+\end{equation}
+
+Combinando estas expresiones, obtenemos: 
+
+\begin{equation}
+    V_o(s) = \frac{a}{s+a}V_i(s), \quad a = \frac{1}{RC}
+\end{equation}
+
+Para la magnitud $|G(jw)|$ recordemos que toda función de transferencia se define como el cociente de la salida entre la entrada:
+
+\begin{equation}
+    |G(jw)| = 
+\end{equation}
+
+Realizamos el cambio de variable $s = jw$, obteniendo la siguiente ecuación:
+
+\begin{equation}
+    G(jw)  = \frac{a}{a+jw} 
+\end{equation}
+
+Multiplicando por el factor $\frac{a-jw}{a-jw}$ obtenemos: 
+
+\begin{equation}
+    G(jw) = \frac{a}{a+jw}\left[\frac{a-jw}{a-jw}\right] = \frac{a(a-jw)}{a^2-(jw)^2} = \frac{a(a-jw)}{a^2+w^2}
+\end{equation}
+
+Para la magnitud $|G(jw)|$ recordemos que toda función de transferencia se define como el cociente de la salida entre la entrada: 
+
+\begin{equation}
+    |G(jw)| = \left|\frac{a(a-jw)}{a^2+w^2}\right| = \frac{|a(a-jw)|}{a^2+w^2}
+\end{equation}
+
+
+\section{Materiales y Métodos}
+
+
+
+\section{Resultados y Discusión}
+Se ponen los Cuadros y/o Figuras que muestran los resultados producto de de la práctica o de la implementación. Es necesario discutirlos tanto de manera individual como colectiva.
+
+En la Figura \ref{fig:sim} se presenta la respuesta temporal en simulación del sistema en lazo cerrado cuando se controla la posición de la flecha de salida del motor de CD.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.30\textwidth]{img/logos_fi_uaq.png}
+	\caption{Escudos.}
+	\label{fig:Escudos}
+\end{figure}
+
+En la Figura \ref{fig:Escudos} se muestran los escudos con escala de $0.3$ (equivalente al $30\ [\%]$ del tamaño del renglón).
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.60\textwidth]{img/logos_fi_uaq.png}
+	\caption{Escudos al doble de tamaño y sin salirse de la caja.}
+	\label{fig:Escudos-doble}
+\end{figure}
+
+Para que las gráficas de simulación en simulink tengan el mismo formato que las gráficas experimentales, se utiliza el bloque \textit{To workspace} (ver Figura \ref{fig:diagsim}), así con los datos de la simulación que se generan en el espacio de trabajo de matlab, se puede crear un archivo txt correspondiente a la simulación y correr un código semejante al que hace la gráfica experimental (ver Anexo \ref{proggsim}) con el intérprete de LaTeX asegurando el mismo formato tanto en las gráficas de simulación como en las gráficas experimentales.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.97\textwidth]{img/diag_simulink.png}
+	\caption{Diagrama para simulación del sistema en lazo cerrado con $K_p=3.18$ para $r=\pi\ [rad]$ en simulink.}
+	\label{fig:diagsim}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1.0\textwidth]{img/sim.eps}
+	\caption{Respuesta temporal en simulación del sistema en lazo cerrado con $K_p=3.18$ para $r=\pi\ [rad]$.}
+	\label{fig:sim}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1.0\textwidth]{img/exp.eps}
+	\caption{Respuesta temporal experimental del sistema en lazo cerrado con $K_p=3.18$ para $r=\pi\ [rad]$.}
+	\label{fig:exp}
+\end{figure}
+
+Para tener derecho a examen ordinario es necesario tener el $80\left[\%\right]$ de asistencia \citep{urlREUAQ2026}.
+
+Cada miembro del equipo (en orden alfabético tal y como aparecen en la portada del reporte) discute los resultados.
+
+\subsection{\EstudianteA}
+En la Figura...
+
+\subsection{\EstudianteB}
+En la Figura...
+
+\subsection{\EstudianteC}
+En la Figura...
+
+\subsection{\EstudianteD}
+En la Figura...
+
+\subsection{\EstudianteE}
+En la Figura...
+
+\subsection{\EstudianteF}
+En la Figura...
+ 
+ 
+ 
+\subsection{Resultados y discusión del equipo}
+
+Se escribe la discusión de los resultados de manera colectiva o del equipo. En la Figura \ref{fig:sim} se puede observar en simulación un tiempo de levantamiento $t_r=0.08454\ [s]$ y un sobrepaso $M_p=76.92\ [\%]$ mientras que de manera experimental (ver Figura \ref{fig:exp}) se obtuvo un tiempo de levantamiento $t_r=0.08431\ [s]$ y un sobrepaso $M_p=76.98\ [\%]$.
+
+
+
+\section{Conclusiones}
+Cada miembro del equipo (en orden alfabético tal y como aparecen en la portada del reporte) escribe sus conclusiones.
+
+\subsection{Arvizu Pérez Pedro}
+En esta práctica...
+ 
+
+\subsection{Barrera López Daniel}
+En esta práctica...
+
+\subsection{Galicia Rocha Sandra}
+En esta práctica...
+
+\subsection{Mateos Rico Juan Carlos}
+ En esta práctica...
+ 
+\subsection{Conclusiones del equipo}
+Se escriben las conclusiones colectivas o del equipo. En esta práctica...
+
+
+
+
+\vspace{10 mm}
+\addcontentsline{toc}{section}{Bibliografía}
+\bibliographystyle{uaq_prev}%{uaq_prev}%{apalike}%{apsr}%{apalike}%{abbrvnat}%archivo .bst
+\bibliography{rep}%archivo .bib
+
+\newpage
+\section{Anexos}
+
+\subsection{Programa para graficar la simulación}\label{proggsim}
+En este anexo se muestra el código fuente para graficar los resultados en simulación con el intérprete de LaTeX.
+{\scriptsize
+\begin{verbatim}
+%Gráfica del control de posición
+clc;
+clear all;
+close all;
+%leyendo las muestras tomadas al sistema
+fid=fopen('gsim.txt','r'); %gsim simulación, gexp experimento
+datos=fscanf(fid, '%f', [5 inf]);    % datos tiene 5 renglones
+fclose(fid);
+t=datos(1,:); 
+r=datos(2,:);
+y=datos(3,:);
+u=datos(4,:);
+e=datos(5,:);
+
+figure(1)
+subplot(3,1,1)
+plot(t,r,t,y);
+set(legend('$r\left[rad\right]$','$y\left[rad\right]$'), 'interpreter', 'latex')
+grid on;
+
+subplot(3,1,2)
+plot(t,e);
+set(legend('$e\left[rad\right]$'), 'interpreter', 'latex')
+grid on;
+
+subplot(3,1,3)
+plot(t,u);
+set(legend('$u\left[V\right]$'), 'interpreter', 'latex')
+xlabel('$t\left[s\right]$', 'interpreter', 'latex')
+grid on;
+\end{verbatim}
+}
+
+\subsection{Programa para graficar la experimentación}
+En este anexo se muestra el código fuente para graficar los resultados experimentales con el intérprete de LaTeX.
+{\scriptsize
+\begin{verbatim}
+%Gráfica del control de posición
+clc;
+clear all;
+close all;
+%leyendo las muestras tomadas al sistema
+fid=fopen('gexp.txt','r'); %gsim simulación, gexp experimento
+datos=fscanf(fid, '%f', [5 inf]);    % datos tiene 5 renglones
+fclose(fid);
+t=datos(1,:); 
+r=datos(2,:);
+y=datos(3,:);
+u=datos(4,:);
+e=datos(5,:);
+
+figure(1)
+subplot(3,1,1)
+plot(t,r,t,y);
+set(legend('$r\left[rad\right]$','$y\left[rad\right]$'), 'interpreter', 'latex')
+grid on;
+
+subplot(3,1,2)
+plot(t,e);
+set(legend('$e\left[rad\right]$'), 'interpreter', 'latex')
+grid on;
+
+subplot(3,1,3)
+plot(t,u);
+set(legend('$u\left[V\right]$'), 'interpreter', 'latex')
+xlabel('$t\left[s\right]$', 'interpreter', 'latex')
+grid on;
+\end{verbatim}
+}
+
+
+
+\end{document}

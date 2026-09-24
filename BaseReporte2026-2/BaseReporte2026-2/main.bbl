@@ -1,0 +1,45 @@
+\begin{thebibliography}{xx}
+
+\harvarditem{Aguado-Behar}{2000}{Aguado2000}
+Aguado-Behar, Alberto. 2000.
+\newblock {Temas de identificaci{\'o}n y control adaptable}.
+\newblock First ed. Instituto de Cibern{\'e}tica, Matem{\'a}tica y F{\'i}sica
+  La Habana, Cuba.
+
+\harvarditem{Aguado-Behar y Mart{\'i}nez-Iranzo}{2003}{Aguado2003}
+Aguado-Behar, Alberto \harvardand\ Miguel Mart{\'i}nez-Iranzo. 2003.
+\newblock {Identificaci{\'o}n y control adaptativo}.
+\newblock 1 ed. PRENTICE-HALL Madrid, Espa{\~n}a.
+
+\harvarditem{Carrillo-Serrano}{2026}{notasclase}
+Carrillo-Serrano, R.~V. 2026.
+\newblock Material did{\'a}ctico control avanzado. Notas de clase.
+
+\harvarditem[Hern{\'a}ndez-Guzm{\'a}n et~al.]{Hern{\'a}ndez-Guzm{\'a}n,
+  Silva-Ortigoza y Orrante-Sakanassi}{2024}{HernandezBook2024}
+Hern{\'a}ndez-Guzm{\'a}n, Victor~Manuel, Ram{\'o}n Silva-Ortigoza \harvardand\
+  Jorge~Alberto Orrante-Sakanassi. 2024.
+\newblock {Automatic control with experiments}.
+\newblock 2 ed. Springer London, UK.
+
+\harvarditem[Hernández-Guzmán et~al.]{Hernández-Guzmán, Silva-Ortigoza y
+  Carrillo-Serrano}{2013}{HernandezBook2013}
+Hernández-Guzmán, Victor~Manuel, Ramón Silva-Ortigoza \harvardand\
+  Roberto~Valentín Carrillo-Serrano. 2013.
+\newblock {Control Automático: Teoría de Diseño, Construcción de
+  Prototipos, Modelado, Identificación y Pruebas Experimentales}.
+\newblock 1 ed. COLECCIÓN CIDETEC México D.F.
+
+\harvarditem{Ogata}{2010}{Ogata2010}
+Ogata, K. 2010.
+\newblock {Ingeniería de control moderna}.
+\newblock 5 ed. Prentice Hall Madrid.
+
+\harvarditem{UAQ}{2026}{urlREUAQ2026}
+UAQ. 2026.
+\newblock Reglamento de estudiantes.
+\newblock
+  \url{https://www.uaq.mx/leyes/documentos/Reglamento_Estudiantes_UAQ.pdf}
+  [Accedido: 15/08/2026].
+
+\end{thebibliography}
