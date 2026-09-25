@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1790298054.05388 "main.aux" "main.bbl" "main" 1790298106.77205 0
+["bibtex main"] 1790362768.37049 "main.aux" "main.bbl" "main" 1790362771.43612 0
   "./rep.bib" 1790290447 3034 6847c96a012248fc43344eeeb0ae4a74 ""
   "./uaq_prev.bst" 1790273837 25321 5ee21b27ee34d54f3bc576a274f6c546 ""
-  "main.aux" 1790298106 6616 6a1768099b23fa9c0382299dbc327b89 "pdflatex"
+  "main.aux" 1790362770 6142 ebc004d9069b752f43a779b983f2f40e "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1790298104.85742 "c:/Users/Dell/Documents/GitHub/Control_II/Practica01/BaseReporte2026-2/main.tex" "main.pdf" "main" 1790298106.77272 0
+["pdflatex"] 1790362768.82555 "c:/Users/Dell/Documents/GitHub/Control_II/Practica01/BaseReporte2026-2/main.tex" "main.pdf" "main" 1790362771.43682 0
   "C:/Users/Dell/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1790290654 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/Dell/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1790273896 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/Dell/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1790273898 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -150,6 +150,7 @@
   "C:/Users/Dell/AppData/Local/Programs/MiKTeX/tex/latex/base/inputenc.sty" 1761900684 5048 0270515b828149155424600fd2d58ac5 ""
   "C:/Users/Dell/AppData/Local/Programs/MiKTeX/tex/latex/base/size10.clo" 1761900684 8448 686612a86f0e04f41ea577f5ec7e83d8 ""
   "C:/Users/Dell/AppData/Local/Programs/MiKTeX/tex/latex/blox/blox.sty" 1614781506 7491 b156f77bb6b90f47c51f55c40d3eddc1 ""
+  "C:/Users/Dell/AppData/Local/Programs/MiKTeX/tex/latex/booktabs/booktabs.sty" 1579093635 6253 f1cb470c9199e7110a27851508ed7a5c ""
   "C:/Users/Dell/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1623003186 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "C:/Users/Dell/AppData/Local/Programs/MiKTeX/tex/latex/etoolbox/etoolbox.sty" 1759409308 46885 8953c67ffba03252c6090aa19568b8ba ""
   "C:/Users/Dell/AppData/Local/Programs/MiKTeX/tex/latex/float/float.sty" 1469023953 6916 16d2656a1984957e674b149555f1ea1d ""
@@ -196,20 +197,17 @@
   "C:/Users/Dell/AppData/Local/Programs/MiKTeX/tex/latex/tools/tabularx.sty" 1761901070 7243 a2c17f18e2c9b702b84fad03d5f9c78b ""
   "C:/Users/Dell/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Dell/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "c:/Users/Dell/Documents/GitHub/Control_II/Practica01/BaseReporte2026-2/main.tex" 1790298104 15364 949cdf3a42c413770da962d1844c0919 ""
+  "c:/Users/Dell/Documents/GitHub/Control_II/Practica01/BaseReporte2026-2/main.tex" 1790362765 17839 329b4a79532c34296069a8ec03551065 ""
   "img/Circuito_RC.png" 1790285835 10683 810c0ade84d03a6f8de445bf431c1245 ""
-  "img/diag_simulink.png" 1790273837 16001 75898957b50db6c022e03f1271a248ca ""
   "img/entrada_salida.png" 1790285835 59891 3323a2c48fddbcb7b2f83b50f9ded0dc ""
-  "img/exp.eps" 1790273837 130061 b8869549e4eef4a2bb2a97a7df586535 ""
   "img/logos_fi_uaq.png" 1790273837 48821 a4a4a0c9b2d819ce99be4a26c46c99d2 ""
-  "img/sim.eps" 1790273837 128201 92696f8c4b0c6e6d64cf03a1a2c8df5a ""
-  "main.aux" 1790298106 6616 6a1768099b23fa9c0382299dbc327b89 "pdflatex"
-  "main.bbl" 1790298054 410 609641ce3816e2ca2b235a98db532507 "bibtex main"
-  "main.lof" 1790298106 972 8dd0a4de7a78ced122f943dd58b835e8 "pdflatex"
-  "main.lot" 1790298106 30 1bb04962d39b6bda471ac6c46ce13f85 "pdflatex"
-  "main.out" 1790298106 4603 9378e2796397addc4826df6afd1f13eb "pdflatex"
-  "main.tex" 1790298104 15364 949cdf3a42c413770da962d1844c0919 ""
-  "main.toc" 1790298106 2274 9a377bd15e0beaa9c7f3a30ea4eda253 "pdflatex"
+  "main.aux" 1790362770 6142 ebc004d9069b752f43a779b983f2f40e "pdflatex"
+  "main.bbl" 1790362768 205 ad237e9d487df913f93b2b9db055c4e9 "bibtex main"
+  "main.lof" 1790362770 265 b6a9f881990d4cad5c9c20d5e7e192e0 "pdflatex"
+  "main.lot" 1790362770 282 0393c287938162ec959511fb473876e8 "pdflatex"
+  "main.out" 1790362770 5261 23aa4af7e98752df0e18e88107df64f4 "pdflatex"
+  "main.tex" 1790362765 17839 329b4a79532c34296069a8ec03551065 ""
+  "main.toc" 1790362770 2636 ec88e876c1e092576c3070d18d203cbc "pdflatex"
   (generated)
   "main.aux"
   "main.lof"
