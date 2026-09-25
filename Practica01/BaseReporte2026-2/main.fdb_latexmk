@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1790362768.37049 "main.aux" "main.bbl" "main" 1790362771.43612 0
+["bibtex main"] 1790379710.10849 "main.aux" "main.bbl" "main" 1790379713.19571 0
   "./rep.bib" 1790290447 3034 6847c96a012248fc43344eeeb0ae4a74 ""
   "./uaq_prev.bst" 1790273837 25321 5ee21b27ee34d54f3bc576a274f6c546 ""
-  "main.aux" 1790362770 6142 ebc004d9069b752f43a779b983f2f40e "pdflatex"
+  "main.aux" 1790379712 6664 055ab737fafe9ff6be350e0698c561ca "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1790362768.82555 "c:/Users/Dell/Documents/GitHub/Control_II/Practica01/BaseReporte2026-2/main.tex" "main.pdf" "main" 1790362771.43682 0
+["pdflatex"] 1790379710.49151 "c:/Users/Dell/Documents/GitHub/Control_II/Practica01/BaseReporte2026-2/main.tex" "main.pdf" "main" 1790379713.19641 0
   "C:/Users/Dell/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1790290654 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/Dell/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1790273896 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/Dell/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1790273898 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -38,6 +38,7 @@
   "C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1247596667 32762 7fee39e011c23b3589931effd97b9702 ""
   "C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1247596666 32716 08e384dc442464e7285e891af9f45947 ""
+  "C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1247596673 31764 459c573c03a4949a528c2cc7f557e217 ""
   "C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb" 1136846148 45758 19968a0990191524e34e1994d4a31cb6 ""
   "C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb" 1136874948 44729 fea0975e20ec51c992338362f05f1146 ""
   "C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb" 1136874948 46026 687528a208fbfc1f00832bb96cccebbb ""
@@ -197,17 +198,18 @@
   "C:/Users/Dell/AppData/Local/Programs/MiKTeX/tex/latex/tools/tabularx.sty" 1761901070 7243 a2c17f18e2c9b702b84fad03d5f9c78b ""
   "C:/Users/Dell/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Dell/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "c:/Users/Dell/Documents/GitHub/Control_II/Practica01/BaseReporte2026-2/main.tex" 1790362765 17839 329b4a79532c34296069a8ec03551065 ""
+  "c:/Users/Dell/Documents/GitHub/Control_II/Practica01/BaseReporte2026-2/main.tex" 1790379700 20111 5d2e99403f4f34b0209222d26d6b578a ""
   "img/Circuito_RC.png" 1790285835 10683 810c0ade84d03a6f8de445bf431c1245 ""
+  "img/Circuito_RC_altas.png" 1790379546 79759 b132be8188f5bca03c13a4d830a1696e ""
   "img/entrada_salida.png" 1790285835 59891 3323a2c48fddbcb7b2f83b50f9ded0dc ""
   "img/logos_fi_uaq.png" 1790273837 48821 a4a4a0c9b2d819ce99be4a26c46c99d2 ""
-  "main.aux" 1790362770 6142 ebc004d9069b752f43a779b983f2f40e "pdflatex"
-  "main.bbl" 1790362768 205 ad237e9d487df913f93b2b9db055c4e9 "bibtex main"
-  "main.lof" 1790362770 265 b6a9f881990d4cad5c9c20d5e7e192e0 "pdflatex"
-  "main.lot" 1790362770 282 0393c287938162ec959511fb473876e8 "pdflatex"
-  "main.out" 1790362770 5261 23aa4af7e98752df0e18e88107df64f4 "pdflatex"
-  "main.tex" 1790362765 17839 329b4a79532c34296069a8ec03551065 ""
-  "main.toc" 1790362770 2636 ec88e876c1e092576c3070d18d203cbc "pdflatex"
+  "main.aux" 1790379712 6664 055ab737fafe9ff6be350e0698c561ca "pdflatex"
+  "main.bbl" 1790379710 205 ad237e9d487df913f93b2b9db055c4e9 "bibtex main"
+  "main.lof" 1790379712 360 b52664f913b2d64bb849fe4bd058f719 "pdflatex"
+  "main.lot" 1790379712 282 12cf747cffae8e49604c7ce89b8e6e07 "pdflatex"
+  "main.out" 1790379712 5428 62d5ed10bf84a4395a1b26357167a862 "pdflatex"
+  "main.tex" 1790379700 20111 5d2e99403f4f34b0209222d26d6b578a ""
+  "main.toc" 1790379712 2722 36bdf5383a512cb72639601a8501dadd "pdflatex"
   (generated)
   "main.aux"
   "main.lof"

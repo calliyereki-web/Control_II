@@ -217,6 +217,64 @@ Para la magnitud $|G(jw)|$ recordemos que toda función de transferencia se defi
     |G(jw)| = \left|\frac{a(a-jw)}{a^2+w^2}\right| = \frac{|a(a-jw)|}{a^2+w^2}
 \end{equation}
 
+\subsection{Filtro RC pasa altas}
+En la Figura~\ref{fig:RC_pasaaltas} se presenta el diagrama de un experimento de un circuito RC (configuración pasa altas) de corriente alterna.
+
+\begin{figure}[H]
+\centering
+    \includegraphics[width=0.4\linewidth]{img/Circuito_RC_altas.png}
+    \caption{Diagrama del circuito RC.}
+    \label{fig:RC_pasaaltas}
+\end{figure}
+
+Para el circuito RC (configurado en pasa altas), la resistencia y el capacitor cambian de lugar, por ende, sus voltajes de entrada y salida están dados por: 
+
+\begin{equation}
+    v_i = \frac{1}{c}\int_{0}^{t}i(\tau)d\tau+Ri, \quad v_o = Ri
+\end{equation}
+
+Pasando a Laplace tenemos: 
+
+\begin{equation}
+    V_i (s) = \frac{1}{Cs}I(s) + RI(s), \quad V_o(s) = RI(s)
+\end{equation}
+
+La función de transferencia en el dominio de Laplace se representa como: 
+
+\begin{equation}
+    G(s) = \frac{V_o (s)}{V_i(s)} = \frac{s}{s+\frac{1}{RC}} = \frac{s}{s+a}, \quad a=\frac{1}{RC}
+\end{equation}
+
+Realizamos el cambio de variable $s = jw$, obteniendo la siguiente ecuación:
+
+\begin{equation}
+    G(jw) = \frac{jw}{jw + a}
+\end{equation}
+
+Multiplicando por el factor $\frac{a-jw}{a-jw}$, obtenemos: 
+
+\begin{equation}
+    G(jw) = \frac{jw}{a + jw}\left[\frac{a-jw}{a-jw}\right] = \frac{jw(a-jw)}{a^2-(jw)^2} = \frac{jwa+w^2}{a^2+w^2}
+\end{equation}
+
+Para la magnitud $|G(jw)|$ recordemos que toda función de transferencia se define como el cociente de la salida entre la entrada (\cite{notasclase}): 
+
+\begin{equation}
+    |G(jw)| = \left|\frac{jwa+w^2}{a^2+w^2}\right| = \frac{|w(ja+w)|}{a^2+w^2} = \frac{w\sqrt{a^2+w^2}}{\sqrt{a^2+w^2}\sqrt{a^2+w^2}} = \frac{w}{\sqrt{a^2+w^2}} 
+    \label{eq:Magnitud_pa}
+\end{equation}
+
+
+Para el caso de la fase $\angle G(jw) = \phi$ recordemos que los ceros aportan fase positiva mientras que los polos aportan fase negativa, además de la identidad $-\arctan(\alpha) = \arctan(-\alpha)$ (\cite{notasclase}):
+
+\begin{equation}
+    \begin{aligned}
+         \phi = \angle G(jw) = \angle \left(\frac{jw}{a+jw}\right) = \angle jw-\angle (a+jw) \\ = \arctan\left(\frac{w}{0}\right) -\arctan\left(\frac{w}{a}\right)= 90\,[^\circ] - \arctan \left(\frac{w}{a}\right)
+        \label{eq:fase_pa}
+    \end{aligned}
+\end{equation}
+
+
 
 \section{Materiales y Métodos}
 Para la realización de la práctica se utilizaron los siguientes materiales:
