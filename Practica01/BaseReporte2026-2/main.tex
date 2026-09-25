@@ -118,11 +118,11 @@
 Construir un filtro RC pasa bajas de primer orden y un filtro RC pasa altas de primer orden para ver su respuesta en frecuencia en el osciloscopio, graficando el comportamiento de la magnitud y de la fase ante una señal sinusoidal de entrada con una amplitud constante y diferentes frecuencias
 
 \section{Marco Teórico}
-Si a un sistema $G(s)$ cualquiera le aplicamos en la entrada una señal en forma de seno o coseno, la manera en que cambian la amplitud y la fase de la señal de salida depende de cómo son y en dónde están ubicados los polos y ceros de la función de transferencia de nuestra planta (\cite{notasclase}). 
+Si a un proceso $G(s)$ cualquiera le aplicamos un a la entrada una señal en forma de seno o coseno, la manera en que cambian la amplitud y la fase de la señal de salida depende de cómo son y en dónde están ubicados los polos y ceros de la función de transferencia de nuestra planta (\cite{notasclase}). 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\linewidth]{img/entrada_salida.png}
+    \includegraphics[width=0.5\linewidth]{BaseReporte2026-1/entrada_salida.png}
     \caption{Relación entre la amplitud y fase de las señales de entrada y salida}
     \label{fig:vi_vo}
 \end{figure}
@@ -130,7 +130,7 @@ Si a un sistema $G(s)$ cualquiera le aplicamos en la entrada una señal en forma
 La idea básica de la respuesta en frecuencia es que si se le aplica una entrada sinusoidal cualquiera, $v_i$, el cual está representado por:
 
 \begin{equation}
-	v_i = Asen(wt)
+	v_i = A\sin(wt)
 	\label{eq:entrada_vi}
 \end{equation}
 
@@ -138,7 +138,7 @@ Donde $w$ es la frecuencia en $[\frac{rad}{s}]$.
 En la salida del sistema obtendremos una señal sinusoidal la cual dependiendo de la función de transferencia, saldrá con otra amplitud y una fase distinta con relación con la señal aplicada a la entrada, la cual podemos representar como: 
 
 \begin{equation}
-    v_o=Bsen(wt+\phi )
+    v_o=B\sin(wt+\phi )
     \label{eq:salida_vo}
 \end{equation}
 
@@ -154,7 +154,7 @@ En la Figura~\ref{fig:RC_pasabajas} se presenta el diagrama de un experimento de
 
 \begin{figure}[H]
 \centering
-    \includegraphics[width=0.4\linewidth]{img/Circuito_RC.png}
+    \includegraphics[width=0.4\linewidth]{BaseReporte2026-1/Circuito_RC.png}
     \caption{Diagrama del circuito RC.}
     \label{fig:RC_pasabajas}
 \end{figure}
@@ -193,12 +193,6 @@ Combinando estas expresiones, obtenemos:
     V_o(s) = \frac{a}{s+a}V_i(s), \quad a = \frac{1}{RC}
 \end{equation}
 
-Para la magnitud $|G(jw)|$ recordemos que toda función de transferencia se define como el cociente de la salida entre la entrada:
-
-\begin{equation}
-    |G(jw)| = 
-\end{equation}
-
 Realizamos el cambio de variable $s = jw$, obteniendo la siguiente ecuación:
 
 \begin{equation}
@@ -211,10 +205,66 @@ Multiplicando por el factor $\frac{a-jw}{a-jw}$ obtenemos:
     G(jw) = \frac{a}{a+jw}\left[\frac{a-jw}{a-jw}\right] = \frac{a(a-jw)}{a^2-(jw)^2} = \frac{a(a-jw)}{a^2+w^2}
 \end{equation}
 
-Para la magnitud $|G(jw)|$ recordemos que toda función de transferencia se define como el cociente de la salida entre la entrada: 
+Para la magnitud $|G(jw)|$ recordemos que toda función de transferencia se define como el cociente de la salida entre la entrada (\cite{notasclase}): 
 
 \begin{equation}
-    |G(jw)| = \left|\frac{a(a-jw)}{a^2+w^2}\right| = \frac{|a(a-jw)|}{a^2+w^2}
+    |G(jw)| = \left|\frac{a(a-jw)}{a^2+w^2}\right| = \frac{|a(a-jw)|}{a^2+w^2} = \frac{a\sqrt{a^2+w^2}}{\sqrt{a^2+w^2}\sqrt{a^2+w^2}} = \frac{a}{\sqrt{a^2+w^2}} = \frac{A}{B}
+    \label{eq:Magnitud_pb}
+\end{equation}
+
+Para el caso de la fase $\angle G(jw) = \phi$ recordemos que los ceros aportan fase positiva mientras que los polos aportan fase negativa, además de la identidad $-\arctan(\alpha) = \arctan(-\alpha)$ (\cite{notasclase}):
+
+\begin{equation}
+    \phi = \angle G(jw) = \angle \left(\frac{a}{a+jw}\right) = 0-\angle (a+jw) = -\arctan\left(\frac{w}{a}\right)
+    \label{eq:fase_pb}
+\end{equation}
+
+\subsection{Filtro RC pasa altas}
+Para el circuito RC (configurado en pasa altas), la resistencia y el capacitor cambian de lugar, por ende, sus voltajes de entrada y salida están dados por: 
+
+\begin{equation}
+    v_i = \frac{1}{c}\int_{0}^{t}i(\tau)d\tau+Ri, \quad v_o = Ri
+\end{equation}
+
+Pasando a Laplace tenemos: 
+
+\begin{equation}
+    V_i (s) = \frac{1}{Cs}I(s) + RI(s), \quad V_o(s) = RI(s)
+\end{equation}
+
+La función de transferencia en el dominio de Laplace se representa como: 
+
+\begin{equation}
+    G(s) = \frac{V_o (s)}{V_i(s)} = \frac{s}{s+\frac{1}{RC}} = \frac{s}{s+a}, \quad a=\frac{1}{RC}
+\end{equation}
+
+Realizamos el cambio de variable $s = jw$, obteniendo la siguiente ecuación:
+
+\begin{equation}
+    G(jw) = \frac{jw}{jw + a}
+\end{equation}
+
+Multiplicando por el factor $\frac{a-jw}{a-jw}$, obtenemos: 
+
+\begin{equation}
+    G(jw) = \frac{jw}{a + jw}\left[\frac{a-jw}{a-jw}\right] = \frac{jw(a-jw)}{a^2-(jw)^2} = \frac{jwa+w^2}{a^2+w^2}
+\end{equation}
+
+Para la magnitud $|G(jw)|$ recordemos que toda función de transferencia se define como el cociente de la salida entre la entrada (\cite{notasclase}): 
+
+\begin{equation}
+    |G(jw)| = \left|\frac{jwa+w^2}{a^2+w^2}\right| = \frac{|w(ja+w)|}{a^2+w^2} = \frac{w\sqrt{a^2+w^2}}{\sqrt{a^2+w^2}\sqrt{a^2+w^2}} = \frac{w}{\sqrt{a^2+w^2}} 
+    \label{eq:Magnitud_pa}
+\end{equation}
+
+
+Para el caso de la fase $\angle G(jw) = \phi$ recordemos que los ceros aportan fase positiva mientras que los polos aportan fase negativa, además de la identidad $-\arctan(\alpha) = \arctan(-\alpha)$ (\cite{notasclase}):
+
+\begin{equation}
+    \begin{aligned}
+         \phi = \angle G(jw) = \angle \left(\frac{jw}{a+jw}\right) = \angle jw-\angle (a+jw) \\ = \arctan\left(\frac{w}{0}\right) -\arctan\left(\frac{w}{a}\right)= 90\,[^\circ] - \arctan \left(\frac{w}{a}\right)
+        \label{eq:fase_pa}
+    \end{aligned}
 \end{equation}
 
 
