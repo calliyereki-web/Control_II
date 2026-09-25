@@ -4,12 +4,12 @@
 \contentsline {subsection}{\numberline {2.1}Filtro RC pasa bajas}{2}{subsection.2.1}%
 \contentsline {section}{\numberline {3}Materiales y Métodos}{3}{section.3}%
 \contentsline {section}{\numberline {4}Resultados y Discusión}{3}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Calli Yereki Peña Pérez}{5}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Aaron Emmanuel Trejo Jotolín}{5}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Dani}{5}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Kevini}{6}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Ivancini}{6}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Dieguini}{6}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.1}Breña Torres Axel Ivan}{5}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Davalos Salina Diego Alberyo}{5}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Jiménes Herrera Daniela}{5}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Paredes Lara Kevin}{6}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Peña Pérez Calli Yereki}{6}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Trejo Mendoza Aaron Emmanuel}{6}{subsection.4.6}%
 \contentsline {subsection}{\numberline {4.7}Resultados y discusión del equipo}{6}{subsection.4.7}%
 \contentsline {section}{\numberline {5}Conclusiones}{6}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Arvizu Pérez Pedro}{6}{subsection.5.1}%
