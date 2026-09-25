@@ -221,10 +221,61 @@ Para la magnitud $|G(jw)|$ recordemos que toda función de transferencia se defi
 Para la realización de la práctica se utilizaron los siguientes materiales:
 \begin{itemize}
 
+	\item Resistencia de $67\ [k\Omega]$.
+	\item Capacitor de $6.7\ [\mu F]$.
+	\item Soldura de estaño.
+	\item Estación de soldadura.
 	\item Generador de funciones.
 	\item Osciloscopio digital.
 	
 \end{itemize}
+
+Igualmente, se utilizó el software de hoja de cálculo \textit{Excel} para graficar los resultados 
+medidos con el osciloscopio y los resultados teoricos obtenidos a partir de las formulas especificadas 
+en el Marco Teórico.
+
+\subsection{Creación del Circuito}
+Se construyón el circuito RC pasa bajas de primer orden siguiendo el diagrama de la 
+Figura~\ref{fig:RC_pasabajas}, soldando las terminales de la resistencia y del capacitor
+entre sí, con el propósito de reducir la resistencia de contacto y evitar que se generen
+errores en la medición de la señal de salida.
+
+\subsection{Generación de la señal de entrada}
+Se generó una señal sinusoidal de entrada con una amplitud constante de $1\ [V]$
+y diferentes frecuencias propuestas en $\frac{Rad}{s}$, las cuales fueron calculadas
+también en $[Hz]$ para poder ser introducidas en el generador de funciones. La sonda
+positiva del osciloscopio se conectó a la salida del generador de funciones y la sonda
+negativa a tierra, para poder medir la señal de entrada.
+
+\subsection{Medición de la señal de salida}
+Con la ayuda de los cursores del osciloscopio, se midió la amplitud de la señal de salida
+en $[V]$ y el tiempo de retardo en $[ms]$ con respecto a la señal de entrada, para poder
+calcular así el desfase en grados. La señal de salida se midió conectando la sonda positiva
+del osciloscopio a la salida del circuito y la sonda negativa a tierra.
+
+\subsection{Cálculo de la magnitud y del desfase}
+Una vez obtenidos los valores de la amplitud de la señal de salida y del tiempo de retardo, 
+se calculó la ganancia en $[Db]$ y el desfase en $[rad]$ con las siguientes ecuaciones:
+\begin{equation}
+    G = \frac{V_o}{V_i}
+    \label{eq:ganancia}
+\end{equation}
+
+\begin{equation}
+    G_{\mathrm{dB}} = 20\log_{10}\left(\frac{V_o}{V_i}\right)
+    \label{eq:ganancia_db}
+\end{equation}
+
+\begin{equation}
+    \phi = \omega t_{\phi}
+    = 2\pi f t_{\phi}
+    = \frac{2\pi t_{\phi}}{T}
+    \quad [\mathrm{rad}]
+    \label{eq:desfase_rad}
+\end{equation}
+
+Todos estos cálculos se realizaron en la hoja de cálculo \textit{Excel} 
+para poder, posteriorente, graficar los resultados obtenidos.
 
 
 \section{Resultados y Discusión}

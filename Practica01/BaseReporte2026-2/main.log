@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.8.26)  24 SEP 2026 18:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.8.26)  24 SEP 2026 19:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -660,7 +660,7 @@ Package hyperref Info: Link coloring ON on input line 46.
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-<img/logos_fi_uaq.png, id=93, 576.1525pt x 374.39874pt>
+<img/logos_fi_uaq.png, id=109, 576.1525pt x 374.39874pt>
 File: img/logos_fi_uaq.png Graphic file (type png)
 <use img/logos_fi_uaq.png>
 Package pdftex.def Info: img/logos_fi_uaq.png  used on input line 55.
@@ -705,30 +705,30 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.110 \newpage
                [1]
-<img/entrada_salida.png, id=152, 458.31226pt x 302.3295pt>
+<img/entrada_salida.png, id=172, 458.31226pt x 302.3295pt>
 File: img/entrada_salida.png Graphic file (type png)
 <use img/entrada_salida.png>
 Package pdftex.def Info: img/entrada_salida.png  used on input line 124.
 (pdftex.def)             Requested size: 221.78923pt x 146.3067pt.
-<img/Circuito_RC.png, id=154, 181.8795pt x 94.55325pt>
+<img/Circuito_RC.png, id=174, 181.8795pt x 94.55325pt>
 File: img/Circuito_RC.png Graphic file (type png)
 <use img/Circuito_RC.png>
 Package pdftex.def Info: img/Circuito_RC.png  used on input line 156.
 (pdftex.def)             Requested size: 177.42868pt x 92.24025pt.
- [2 <./img/entrada_salida.png> <./img/Circuito_RC.png>]
+ [2 <./img/entrada_salida.png> <./img/Circuito_RC.png>] [3]
 File: img/logos_fi_uaq.png Graphic file (type png)
 <use img/logos_fi_uaq.png>
-Package pdftex.def Info: img/logos_fi_uaq.png  used on input line 237.
+Package pdftex.def Info: img/logos_fi_uaq.png  used on input line 288.
 (pdftex.def)             Requested size: 133.07489pt x 86.47551pt.
- [3]
 File: img/logos_fi_uaq.png Graphic file (type png)
 <use img/logos_fi_uaq.png>
-Package pdftex.def Info: img/logos_fi_uaq.png  used on input line 246.
+Package pdftex.def Info: img/logos_fi_uaq.png  used on input line 297.
 (pdftex.def)             Requested size: 266.14978pt x 172.95676pt.
-<img/diag_simulink.png, id=186, 648.92438pt x 193.47281pt>
+ [4]
+<img/diag_simulink.png, id=214, 648.92438pt x 193.47281pt>
 File: img/diag_simulink.png Graphic file (type png)
 <use img/diag_simulink.png>
-Package pdftex.def Info: img/diag_simulink.png  used on input line 255.
+Package pdftex.def Info: img/diag_simulink.png  used on input line 306.
 (pdftex.def)             Requested size: 430.27165pt x 128.28583pt.
 Package epstopdf Info: Source file: <img/sim.eps>
 (epstopdf)                    date: 2026-09-24 12:17:17
@@ -737,14 +737,14 @@ Package epstopdf Info: Source file: <img/sim.eps>
 (epstopdf)                    date: 2026-09-24 12:17:17
 (epstopdf)                    size: 11813 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=img/sim-eps-converted-to.pdf img/sim.eps>
-(epstopdf)             \includegraphics on input line 262.
+(epstopdf)             \includegraphics on input line 313.
 Package epstopdf Info: Output file is already uptodate.
-<img/sim-eps-converted-to.pdf, id=187, 1027.84pt x 484.81125pt>
+<img/sim-eps-converted-to.pdf, id=215, 1027.84pt x 484.81125pt>
 File: img/sim-eps-converted-to.pdf Graphic file (type pdf)
 <use img/sim-eps-converted-to.pdf>
-Package pdftex.def Info: img/sim-eps-converted-to.pdf  used on input line 262.
+Package pdftex.def Info: img/sim-eps-converted-to.pdf  used on input line 313.
 (pdftex.def)             Requested size: 443.57848pt x 209.22672pt.
- [4 <./img/diag_simulink.png>]
+ [5 <./img/diag_simulink.png>]
 Package epstopdf Info: Source file: <img/exp.eps>
 (epstopdf)                    date: 2026-09-24 12:17:17
 (epstopdf)                    size: 130061 bytes
@@ -752,18 +752,18 @@ Package epstopdf Info: Source file: <img/exp.eps>
 (epstopdf)                    date: 2026-09-24 12:17:17
 (epstopdf)                    size: 12896 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=img/exp-eps-converted-to.pdf img/exp.eps>
-(epstopdf)             \includegraphics on input line 269.
+(epstopdf)             \includegraphics on input line 320.
 Package epstopdf Info: Output file is already uptodate.
-<img/exp-eps-converted-to.pdf, id=193, 1027.84pt x 484.81125pt>
+<img/exp-eps-converted-to.pdf, id=221, 1027.84pt x 484.81125pt>
 File: img/exp-eps-converted-to.pdf Graphic file (type pdf)
 <use img/exp-eps-converted-to.pdf>
-Package pdftex.def Info: img/exp-eps-converted-to.pdf  used on input line 269.
+Package pdftex.def Info: img/exp-eps-converted-to.pdf  used on input line 320.
 (pdftex.def)             Requested size: 443.57848pt x 209.22672pt.
- [5 <./img/sim-eps-converted-to.pdf> <./img/exp-eps-converted-to.pdf>] (main.bbl
+ [6 <./img/sim-eps-converted-to.pdf> <./img/exp-eps-converted-to.pdf>] (main.bbl
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 11.
  (C:\Users\Dell\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)) [6] [7] (main.aux
+)) [7] [8] (main.aux
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 )
@@ -772,20 +772,20 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: EF05C84E023E604639CCE73FCA7E79E1;3699.
+(rerunfilecheck)             Checksum: 9378E2796397ADDC4826DF6AFD1F13EB;4603.
  ) 
 Here is how much of TeX's memory you used:
- 25516 strings out of 467872
- 493104 string characters out of 5418875
- 921236 words of memory out of 5000000
- 53878 multiletter control sequences out of 15000+600000
+ 25531 strings out of 467872
+ 493308 string characters out of 5418875
+ 923428 words of memory out of 5000000
+ 53885 multiletter control sequences out of 15000+600000
  671483 words of font info for 79 fonts, out of 8000000 for 9000
  1147 hyphenation exceptions out of 8191
  84i,8n,104p,660b,509s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Dell/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (8 pages, 302207 bytes).
+Output written on main.pdf (9 pages, 315399 bytes).
 PDF statistics:
- 301 PDF objects out of 1000 (max. 8388607)
- 54 named destinations out of 1000 (max. 500000)
- 219 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 331 PDF objects out of 1000 (max. 8388607)
+ 62 named destinations out of 1000 (max. 500000)
+ 251 words of extra memory for PDF output out of 10000 (max. 10000000)
 
