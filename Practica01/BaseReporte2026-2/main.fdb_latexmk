@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1790298054.05388 "main.aux" "main.bbl" "main" 1790298106.77205 0
+["bibtex main"] 1790298346.20163 "main.aux" "main.bbl" "main" 1790298348.75125 0
   "./rep.bib" 1790290447 3034 6847c96a012248fc43344eeeb0ae4a74 ""
   "./uaq_prev.bst" 1790273837 25321 5ee21b27ee34d54f3bc576a274f6c546 ""
-  "main.aux" 1790298106 6616 6a1768099b23fa9c0382299dbc327b89 "pdflatex"
+  "main.aux" 1790298347 6616 6a1768099b23fa9c0382299dbc327b89 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1790298104.85742 "c:/Users/Dell/Documents/GitHub/Control_II/Practica01/BaseReporte2026-2/main.tex" "main.pdf" "main" 1790298106.77272 0
+["pdflatex"] 1790298346.5872 "c:/Users/Dell/Documents/GitHub/Control_II/Practica01/BaseReporte2026-2/main.tex" "main.pdf" "main" 1790298348.75242 0
   "C:/Users/Dell/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1790290654 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/Dell/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1790273896 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/Dell/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1790273898 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -196,20 +196,20 @@
   "C:/Users/Dell/AppData/Local/Programs/MiKTeX/tex/latex/tools/tabularx.sty" 1761901070 7243 a2c17f18e2c9b702b84fad03d5f9c78b ""
   "C:/Users/Dell/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Dell/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "c:/Users/Dell/Documents/GitHub/Control_II/Practica01/BaseReporte2026-2/main.tex" 1790298104 15364 949cdf3a42c413770da962d1844c0919 ""
+  "c:/Users/Dell/Documents/GitHub/Control_II/Practica01/BaseReporte2026-2/main.tex" 1790298342 15364 949cdf3a42c413770da962d1844c0919 ""
   "img/Circuito_RC.png" 1790285835 10683 810c0ade84d03a6f8de445bf431c1245 ""
   "img/diag_simulink.png" 1790273837 16001 75898957b50db6c022e03f1271a248ca ""
   "img/entrada_salida.png" 1790285835 59891 3323a2c48fddbcb7b2f83b50f9ded0dc ""
   "img/exp.eps" 1790273837 130061 b8869549e4eef4a2bb2a97a7df586535 ""
   "img/logos_fi_uaq.png" 1790273837 48821 a4a4a0c9b2d819ce99be4a26c46c99d2 ""
   "img/sim.eps" 1790273837 128201 92696f8c4b0c6e6d64cf03a1a2c8df5a ""
-  "main.aux" 1790298106 6616 6a1768099b23fa9c0382299dbc327b89 "pdflatex"
-  "main.bbl" 1790298054 410 609641ce3816e2ca2b235a98db532507 "bibtex main"
-  "main.lof" 1790298106 972 8dd0a4de7a78ced122f943dd58b835e8 "pdflatex"
-  "main.lot" 1790298106 30 1bb04962d39b6bda471ac6c46ce13f85 "pdflatex"
-  "main.out" 1790298106 4603 9378e2796397addc4826df6afd1f13eb "pdflatex"
-  "main.tex" 1790298104 15364 949cdf3a42c413770da962d1844c0919 ""
-  "main.toc" 1790298106 2274 9a377bd15e0beaa9c7f3a30ea4eda253 "pdflatex"
+  "main.aux" 1790298347 6616 6a1768099b23fa9c0382299dbc327b89 "pdflatex"
+  "main.bbl" 1790298346 410 609641ce3816e2ca2b235a98db532507 "bibtex main"
+  "main.lof" 1790298347 972 8dd0a4de7a78ced122f943dd58b835e8 "pdflatex"
+  "main.lot" 1790298347 30 1bb04962d39b6bda471ac6c46ce13f85 "pdflatex"
+  "main.out" 1790298347 4603 9378e2796397addc4826df6afd1f13eb "pdflatex"
+  "main.tex" 1790298342 15364 949cdf3a42c413770da962d1844c0919 ""
+  "main.toc" 1790298347 2274 9a377bd15e0beaa9c7f3a30ea4eda253 "pdflatex"
   (generated)
   "main.aux"
   "main.lof"
