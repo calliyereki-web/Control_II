@@ -39,7 +39,7 @@
 \newcommand{\EstudianteE}{Peña Pérez Calli Yereki}
 \newcommand{\EstudianteF}{Trejo Mendoza Aaron Emmanuel}
 \newcommand{\NumeroPractica}{01}
-\newcommand{\TituloPractica}{Respuesta en frecuencia de filtros RC pasa bajas y pasa altas de primer orden}
+\newcommand{\TituloPractica}{Respuesta en frecuencia del filtro resistivo-capacitivo (RC) pasa bajas de primer orden y del filtro RC pasa altas de primer orden}
 \newcommand{\FechaCompromiso}{25 de septiembre de 2026}
 \newcommand{\FechaEntrega}{\today}
 
@@ -114,15 +114,15 @@
 
 
 \section{Objetivo}
-Construir un filtro RC pasa bajas de primer orden y un filtro RC pasa altas de primer orden para ver su respuesta en frecuencia en el osciloscopio, graficando el comportamiento de la magnitud y de la fase ante una señal sinusoidal de entrada con una amplitud constante y diferentes frecuencias
+Construir un filtro RC pasa bajas de primer orden y un filtro RC pasa altas de primer orden para ver su respuesta en frecuencia en el osciloscopio, graficando el comportamiento de la magnitud y de la fase ante una señal sinusoidal de entrada con una amplitud constante y diferentes frecuencias.
 
 \section{Marco Teórico}
-Si a un proceso $G(s)$ cualquiera le aplicamos un a la entrada una señal en forma de seno o coseno, la manera en que cambian la amplitud y la fase de la señal de salida depende de cómo son y en dónde están ubicados los polos y ceros de la función de transferencia de nuestra planta (\cite{notasclase}). 
+Si a un proceso $G(s)$ cualquiera le aplicamos a la entrada una señal en forma de seno o coseno, la manera en que cambian la amplitud y la fase de la señal de salida depende de cómo son y en dónde están ubicados los polos y ceros de la función de transferencia de nuestra planta (\cite{notasclase}). 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{BaseReporte2026-1/entrada_salida.png}
-    \caption{Relación entre la amplitud y fase de las señales de entrada y salida}
+    \caption{Relación entre la amplitud y fase de las señales de entrada y salida.}
     \label{fig:vi_vo}
 \end{figure}
 
@@ -271,7 +271,7 @@ Para el caso de la fase $\angle G(jw) = \phi$ recordemos que los ceros aportan f
 Para la realización de la práctica se utilizaron los siguientes materiales:
 \begin{itemize}
 
-	\item Resistencia de $67\ [k\Omega]$.
+	\item Resistencia de $67\ [k\omega]$.
 	\item Capacitor de $6.7\ [\mu F]$.
 	\item Soldura de estaño.
 	\item Estación de soldadura.
@@ -383,7 +383,12 @@ En la Figura...
 En la Figura...
 
 \subsection{\EstudianteC}
-En la Figura...
+
+Los datos del Cuadro \ref{tab:filtro_pasabajas} muestran que, para frecuencias bajas (de $10\,[\frac{rad}{s}]$ a $60\,[\frac{rad}{s}]$), la amplitud de salida se mantuvo prácticamente igual a la de entrada, con una ganancia de $0\,[dB]$ y un desfase cercano a $0\,[^ \circ]$, lo cual confirma que el filtro deja pasar sin atenuación las componentes de baja frecuencia. Conforme la frecuencia aumentó, la amplitud de salida decreció de forma progresiva: en $\omega=1000\,[\frac{rad}{s}]$ la ganancia ya era de $-2.73\,[dB]$, y en el punto más alto medido ($\omega=10000\,[\frac{rad}{s}]$) la salida cayó hasta $0.15\,[V]$, equivalente a una atenuación de $-16.48\,[dB]$. 
+
+Un punto relevante es $\omega=1148\,[\frac{rad}{s}]$ ($f = 182.8\,[Hz]$), donde la ganancia medida fue de $-3.223\,[dB]$ y el desfase de $-43.70\,[^\circ]$. Estos valores son muy cercanos a los $-3\,[dB]$ y $-45\,[^\circ]$ que, teóricamente definen la frecuencia de corte. 
+
+El Cuadro \ref{tab:filtro_pasaaltas} exhibe el comportamiento inverso: a bajas frecuencias la señal se atenúa fuertemente (en $\omega = 10\,[\frac{rad}{s}]$, $v_o = 0.02\,[V]$, ganancia = $-33.98\,[dB]$) y el desfase es cercano a $+90\,[^\circ]$ ($94.01\,[^\circ]$ medido), congruente con el adelanto de fase característico de un pasa altas. A medida que la frecuencia crece, la atenuación disminuye y el desfase se reduce: en $\omega = 1148\,[\frac{rad}{s}]$ la ganancia es de $-3.223\,[dB]$ con un desfase de $43.70\,[^\circ]$, coincidiendo con el mismo punto de corte identificado en el filtro pasa bajas. Para frecuencias altas ($\omega \ge 2000\,[\frac{rad}{s}]$) la ganancia se aproxima a $0 \,[dB]$ (en $\omega = 10 000 \,[\frac{rad}{s}]$, $v_o = 0.99\,[V]$, $-0.0873\,[dB]$) y el desfase tiende a $0\,[^\circ]$, tal como predice el modelo teórico $\phi = 90\,[^\circ]-\arctan(\frac{\omega}{a})$.
 
 \subsection{\EstudianteD}
 En la Figura...
@@ -405,18 +410,28 @@ Se escribe la discusión de los resultados de manera colectiva o del equipo. En 
 \section{Conclusiones}
 Cada miembro del equipo (en orden alfabético tal y como aparecen en la portada del reporte) escribe sus conclusiones.
 
-\subsection{Arvizu Pérez Pedro}
-En esta práctica...
- 
+\subsection{Conclusiones EstudianteA}
+En la Figura...
 
-\subsection{Barrera López Daniel}
-En esta práctica...
+\subsection{Conclusiones EstudianteB}
+En la Figura...
 
-\subsection{Galicia Rocha Sandra}
-En esta práctica...
+\subsection{Conclusiones EstudianteC}
 
-\subsection{Mateos Rico Juan Carlos}
- En esta práctica...
+En esta práctica se logró comprobar experimentalmente el comportamiento en frecuencia de los filtros RC pasa bajas y pasa altas de primer orden, obteniendo curvas de ganancia y fase que coinciden de manera cercana con el modelo teórico desarrollado a partir de la función de transferencia $G(s) = \frac{a}{(s+a)}$. La frecuencia de corte experimental, identificada en ambos filtros alrededor de $\omega = 1148\,[\frac{rad}{s}]$ (donde la ganancia cae a $-3\,[dB]$ y la fase alcanza $\pm 45\,[^\circ]$), validó el criterio teórico $a = \frac{1}{RC}$ y permitió confirmar la relación complementaria entre ambas configuraciones del mismo circuito RC.
+
+Durante el desarrollo de la práctica, uno de los principales obstáculos fue la medición precisa del retardo temporal ($\Delta t$) entre la señal de entrada y la de salida a frecuencias altas, donde los intervalos de tiempo se volvían del orden de decenas de microsegundos; esto se resolvió ajustando la escala de tiempo del osciloscopio y usando sus cursores con mayor resolución en cada medición.
+
+Otro reto importante fue minimizar la resistencia de contacto en las conexiones del circuito; esto se solucionó soldando directamente las terminales de la resistencia y el capacitor, lo cual redujo notablemente el ruido y mejoró la repetibilidad de las mediciones.
+
+\subsection{Conclusiones EstudianteD}
+En la Figura...
+
+\subsection{Conclusiones EstudianteE}
+En la Figura...
+
+\subsection{Conclusiones EstudianteF}
+En la Figura...
  
 \subsection{Conclusiones del equipo}
 Se escriben las conclusiones colectivas o del equipo. En esta práctica...
