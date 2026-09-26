@@ -12,6 +12,7 @@
 \usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
 
 % Useful packages
+\usepackage{booktabs}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{float}
@@ -39,7 +40,7 @@
 \newcommand{\EstudianteE}{Peña Pérez Calli Yereki}
 \newcommand{\EstudianteF}{Trejo Mendoza Aaron Emmanuel}
 \newcommand{\NumeroPractica}{01}
-\newcommand{\TituloPractica}{Respuesta en frecuencia del filtro resistivo-capacitivo (RC) pasa bajas de primer orden y del filtro RC pasa altas de primer orden}
+\newcommand{\TituloPractica}{Respuesta en frecuencia de filtros RC pasa bajas y pasa altas de primer orden}
 \newcommand{\FechaCompromiso}{25 de septiembre de 2026}
 \newcommand{\FechaEntrega}{\today}
 
@@ -114,15 +115,15 @@
 
 
 \section{Objetivo}
-Construir un filtro RC pasa bajas de primer orden y un filtro RC pasa altas de primer orden para ver su respuesta en frecuencia en el osciloscopio, graficando el comportamiento de la magnitud y de la fase ante una señal sinusoidal de entrada con una amplitud constante y diferentes frecuencias.
+Construir un filtro RC pasa bajas de primer orden y un filtro RC pasa altas de primer orden para ver su respuesta en frecuencia en el osciloscopio, graficando el comportamiento de la magnitud y de la fase ante una señal sinusoidal de entrada con una amplitud constante y diferentes frecuencias
 
 \section{Marco Teórico}
-Si a un proceso $G(s)$ cualquiera le aplicamos a la entrada una señal en forma de seno o coseno, la manera en que cambian la amplitud y la fase de la señal de salida depende de cómo son y en dónde están ubicados los polos y ceros de la función de transferencia de nuestra planta (\cite{notasclase}). 
+Si a un proceso $G(s)$ cualquiera le aplicamos un a la entrada una señal en forma de seno o coseno, la manera en que cambian la amplitud y la fase de la señal de salida depende de cómo son y en dónde están ubicados los polos y ceros de la función de transferencia de nuestra planta (\cite{notasclase}). 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{BaseReporte2026-1/entrada_salida.png}
-    \caption{Relación entre la amplitud y fase de las señales de entrada y salida.}
+    \caption{Relación entre la amplitud y fase de las señales de entrada y salida}
     \label{fig:vi_vo}
 \end{figure}
 
@@ -266,12 +267,71 @@ Para el caso de la fase $\angle G(jw) = \phi$ recordemos que los ceros aportan f
     \end{aligned}
 \end{equation}
 
+\subsection{Filtro RC pasa altas}
+En la Figura~\ref{fig:RC_pasaaltas} se presenta el diagrama de un experimento de un circuito RC (configuración pasa altas) de corriente alterna.
+
+
+%\begin{figure}[H]
+%\centering
+ %   \includegraphics[width=0.4\linewidth]{img/Circuito_RC_altas.png}
+  %  \caption{Diagrama del circuito RC.}
+   % \label{fig:RC_pasaaltas}
+%\end{figure}
+
+Para el circuito RC (configurado en pasa altas), la resistencia y el capacitor cambian de lugar, por ende, sus voltajes de entrada y salida están dados por: 
+
+\begin{equation}
+    v_i = \frac{1}{c}\int_{0}^{t}i(\tau)d\tau+Ri, \quad v_o = Ri
+\end{equation}
+
+Pasando a Laplace tenemos: 
+
+\begin{equation}
+    V_i (s) = \frac{1}{Cs}I(s) + RI(s), \quad V_o(s) = RI(s)
+\end{equation}
+
+La función de transferencia en el dominio de Laplace se representa como: 
+
+\begin{equation}
+    G(s) = \frac{V_o (s)}{V_i(s)} = \frac{s}{s+\frac{1}{RC}} = \frac{s}{s+a}, \quad a=\frac{1}{RC}
+\end{equation}
+
+Realizamos el cambio de variable $s = jw$, obteniendo la siguiente ecuación:
+
+\begin{equation}
+    G(jw) = \frac{jw}{jw + a}
+\end{equation}
+
+Multiplicando por el factor $\frac{a-jw}{a-jw}$, obtenemos: 
+
+\begin{equation}
+    G(jw) = \frac{jw}{a + jw}\left[\frac{a-jw}{a-jw}\right] = \frac{jw(a-jw)}{a^2-(jw)^2} = \frac{jwa+w^2}{a^2+w^2}
+\end{equation}
+
+Para la magnitud $|G(jw)|$ recordemos que toda función de transferencia se define como el cociente de la salida entre la entrada (\cite{notasclase}): 
+
+\begin{equation}
+    |G(jw)| = \left|\frac{jwa+w^2}{a^2+w^2}\right| = \frac{|w(ja+w)|}{a^2+w^2} = \frac{w\sqrt{a^2+w^2}}{\sqrt{a^2+w^2}\sqrt{a^2+w^2}} = \frac{w}{\sqrt{a^2+w^2}} 
+    \label{eq:Magnitud_pa}
+\end{equation}
+
+
+Para el caso de la fase $\angle G(jw) = \phi$ recordemos que los ceros aportan fase positiva mientras que los polos aportan fase negativa, además de la identidad $-\arctan(\alpha) = \arctan(-\alpha)$ (\cite{notasclase}):
+
+\begin{equation}
+    \begin{aligned}
+         \phi = \angle G(jw) = \angle \left(\frac{jw}{a+jw}\right) = \angle jw-\angle (a+jw) \\ = \arctan\left(\frac{w}{0}\right) -\arctan\left(\frac{w}{a}\right)= 90\,[^\circ] - \arctan \left(\frac{w}{a}\right)
+        \label{eq:fase_pa}
+    \end{aligned}
+\end{equation}
+
+
 
 \section{Materiales y Métodos}
 Para la realización de la práctica se utilizaron los siguientes materiales:
 \begin{itemize}
 
-	\item Resistencia de $67\ [k\omega]$.
+	\item Resistencia de $67\ [k\Omega]$.
 	\item Capacitor de $6.7\ [\mu F]$.
 	\item Soldura de estaño.
 	\item Estación de soldadura.
@@ -292,7 +352,7 @@ errores en la medición de la señal de salida.
 
 \subsection{Generación de la señal de entrada}
 Se generó una señal sinusoidal de entrada con una amplitud constante de $1\ [V]$
-y diferentes frecuencias propuestas en $\frac{Rad}{s}$, las cuales fueron calculadas
+y diferentes frecuencias propuestas en $[\frac{rad}{s}]$, las cuales fueron calculadas
 también en $[Hz]$ para poder ser introducidas en el generador de funciones. La sonda
 positiva del osciloscopio se conectó a la salida del generador de funciones y la sonda
 negativa a tierra, para poder medir la señal de entrada.
@@ -305,7 +365,7 @@ del osciloscopio a la salida del circuito y la sonda negativa a tierra.
 
 \subsection{Cálculo de la magnitud y del desfase}
 Una vez obtenidos los valores de la amplitud de la señal de salida y del tiempo de retardo, 
-se calculó la ganancia en $[Db]$ y el desfase en $[rad]$ con las siguientes ecuaciones:
+se calculó la ganancia en $[dB]$ y el desfase en $[rad]$ con las siguientes ecuaciones:
 \begin{equation}
     G = \frac{V_o}{V_i}
     \label{eq:ganancia}
@@ -320,7 +380,7 @@ se calculó la ganancia en $[Db]$ y el desfase en $[rad]$ con las siguientes ecu
     \phi = \omega t_{\phi}
     = 2\pi f t_{\phi}
     = \frac{2\pi t_{\phi}}{T}
-    \quad [\mathrm{rad}]
+    \quad [\,{^\circ}]
     \label{eq:desfase_rad}
 \end{equation}
 
@@ -329,52 +389,107 @@ para poder, posteriorente, graficar los resultados obtenidos.
 
 
 \section{Resultados y Discusión}
-Se ponen los Cuadros y/o Figuras que muestran los resultados producto de de la práctica o de la implementación. Es necesario discutirlos tanto de manera individual como colectiva.
+A continuación se presentan los resultados obtenidos en la práctica, 
+tanto experimentales como teóricos de ambos filtros, así como la 
+discusion individual de cada integrante del equipo y la discusión 
+colectiva.
 
-En la Figura \ref{fig:sim} se presenta la respuesta temporal en simulación del sistema en lazo cerrado cuando se controla la posición de la flecha de salida del motor de CD.
+\subsection{Resultado Experimentales}
+Los siguientes datos fueron registrados con ayuda del osciloscopio 
+digital, adquiridos por medio de los cursores del mismo.
 
-\begin{figure}[H]
-	\centering
-		\includegraphics[width=0.30\textwidth]{img/logos_fi_uaq.png}
-	\caption{Escudos.}
-	\label{fig:Escudos}
-\end{figure}
+\subsubsection{Filtro Pasa Bajas}
+\begin{table}[H]
+\centering
+\caption{Respuesta en frecuencia experimental del Filtro Pasa Bajas}
+\label{tab:filtro_pasabajas}
+\begin{tabular}{ccccccc}
+	\toprule
+	
+$\omega$ & $f$ & $V_{i}$ & $V_{o}$ & Ganancia & $\Delta t$ & $\phi$ \\
+$[\frac{{rad}}{{s}}]$ & {$[Hz]$} & $[V]$ & $[V]$ & $[dB]$ & $[ms]$ & $[^\circ]$ \\
+\midrule
+10    & 1.592    & 1.00 & 1.00 &   0.0000 & 0.000 &   0.0000 \\
+20    & 3.185    & 1.00 & 1.00 &   0.0000 & 0.000 &   0.0000 \\
+30    & 4.777    & 1.00 & 1.00 &   0.0000 & 0.200 &  -0.3439 \\
+40    & 6.369    & 1.00 & 1.00 &   0.0000 & 0.480 &  -1.1006 \\
+50    & 7.962    & 1.00 & 1.00 &   0.0000 & 0.670 &  -1.9204 \\
+60    & 9.554    & 1.00 & 1.00 &   0.0000 & 1.000 &  -3.4395 \\
+70    & 11.146   & 1.00 & 0.99 &  -0.0873 & 1.000 &  -4.0127 \\
+80    & 12.739   & 1.00 & 0.99 &  -0.0873 & 1.000 &  -4.5860 \\
+90    & 14.331   & 1.00 & 0.99 &  -0.0873 & 1.000 &  -5.1592 \\
+100   & 15.924   & 1.00 & 0.98 &  -0.1755 & 1.000 &  -5.7325 \\
+200   & 31.847   & 1.00 & 0.98 &  -0.1755 & 0.912 & -10.4561 \\
+300   & 47.771   & 1.00 & 0.96 &  -0.3546 & 0.880 & -15.1338 \\
+400   & 63.694   & 1.00 & 0.94 &  -0.5374 & 0.856 & -19.6280 \\
+500   & 79.618   & 1.00 & 0.91 &  -0.8192 & 0.832 & -23.8471 \\
+600   & 95.541   & 1.00 & 0.87 &  -1.2096 & 0.808 & -27.7911 \\
+700   & 111.465  & 1.00 & 0.83 &  -1.6184 & 0.776 & -31.1389 \\
+800   & 127.389  & 1.00 & 0.80 &  -1.9382 & 0.752 & -34.4866 \\
+900   & 143.312  & 1.00 & 0.75 &  -2.4988 & 0.720 & -37.1465 \\
+1000  & 159.236  & 1.00 & 0.73 &  -2.7335 & 0.696 & -39.8981 \\
+1148  & 182.803  & 1.00 & 0.69 &  -3.2230 & 0.664 & -43.6971 \\
+2000  & 318.471  & 1.00 & 0.50 &  -6.0206 & 0.500 & -57.3248 \\
+3000  & 477.707  & 1.00 & 0.38 &  -8.4043 & 0.384 & -66.0382 \\
+4000  & 636.943  & 1.00 & 0.30 & -10.4576 & 0.308 & -70.6242 \\
+5000  & 796.178  & 1.00 & 0.25 & -12.0412 & 0.254 & -72.8025 \\
+6000  & 955.414  & 1.00 & 0.22 & -13.1515 & 0.224 & -77.0446 \\
+7000  & 1114.650 & 1.00 & 0.20 & -13.9794 & 0.198 & -79.4522 \\
+8000  & 1273.885 & 1.00 & 0.18 & -14.8945 & 0.174 & -79.7962 \\
+9000  & 1433.121 & 1.00 & 0.16 & -15.9176 & 0.165 & -85.1274 \\
+10000 & 1592.357 & 1.00 & 0.15 & -16.4782 & 0.144 & -82.5478 \\
 
-En la Figura \ref{fig:Escudos} se muestran los escudos con escala de $0.3$ (equivalente al $30\ [\%]$ del tamaño del renglón).
+\bottomrule
+\end{tabular}
 
-\begin{figure}[H]
-	\centering
-		\includegraphics[width=0.60\textwidth]{img/logos_fi_uaq.png}
-	\caption{Escudos al doble de tamaño y sin salirse de la caja.}
-	\label{fig:Escudos-doble}
-\end{figure}
+\end{table}
 
-Para que las gráficas de simulación en simulink tengan el mismo formato que las gráficas experimentales, se utiliza el bloque \textit{To workspace} (ver Figura \ref{fig:diagsim}), así con los datos de la simulación que se generan en el espacio de trabajo de matlab, se puede crear un archivo txt correspondiente a la simulación y correr un código semejante al que hace la gráfica experimental (ver Anexo \ref{proggsim}) con el intérprete de LaTeX asegurando el mismo formato tanto en las gráficas de simulación como en las gráficas experimentales.
+\subsubsection{Filtro Pasa Altas}
 
-\begin{figure}[H]
-	\centering
-		\includegraphics[width=0.97\textwidth]{img/diag_simulink.png}
-	\caption{Diagrama para simulación del sistema en lazo cerrado con $K_p=3.18$ para $r=\pi\ [rad]$ en simulink.}
-	\label{fig:diagsim}
-\end{figure}
+\begin{table}[H]
+\centering
+\caption{Respuesta en frecuencia experimental del Filtro Pasa Altas}
+\label{tab:filtro_pasaaltas}
+\begin{tabular}{ccccccc}
+    \toprule
+\(\omega\) & \(f\) & \(V_{\text{in}}\) & \(V_{\text{out}}\) & Ganancia & \(\Delta t\) & \(\phi\) \\
+\([\frac{rad}{s}]\) & $[Hz]$ & $[V]$ & $[V]$ & $[dB]$ & $[ms]$ & \ $[^\circ]$\ \\
+\midrule
+10    &    1.592 & 1.00 & 0.02 & -33.9794 & 164.000 & 94.0127 \\
+20    &    3.185 & 1.00 & 0.03 & -30.4576 &  75.200 & 86.2166 \\
+30    &    4.777 & 1.00 & 0.04 & -27.9588 &  49.600 & 85.2994 \\
+40    &    6.369 & 1.00 & 0.05 & -26.0206 &  37.200 & 85.2994 \\
+50    &    7.962 & 1.00 & 0.06 & -24.4370 &  30.000 & 85.9873 \\
+60    &    9.554 & 1.00 & 0.07 & -23.0980 &  25.000 & 85.9873 \\
+70    &   11.146 & 1.00 & 0.08 & -21.9382 &  20.800 & 83.4650 \\
+80    &   12.739 & 1.00 & 0.09 & -20.9151 &  18.200 & 83.4650 \\
+90    &   14.331 & 1.00 & 0.11 & -19.1721 &  16.200 & 83.5796 \\
+100   &   15.924 & 1.00 & 0.11 & -19.1721 &  14.600 & 83.6943 \\
+200   &   31.847 & 1.00 & 0.20 & -13.9794 &   6.720 & 77.0446 \\
+300   &   47.771 & 1.00 & 0.28 & -11.0568 &   4.240 & 72.9172 \\
+400   &   63.694 & 1.00 & 0.35 &  -9.1186 &   2.960 & 67.8726 \\
+500   &   79.618 & 1.00 & 0.43 &  -7.3306 &   2.220 & 63.6306 \\
+600   &   95.541 & 1.00 & 0.47 &  -6.5580 &   1.740 & 59.8471 \\
+700   &  111.465 & 1.00 & 0.52 &  -5.6799 &   1.380 & 55.3758 \\
+800   &  127.389 & 1.00 & 0.57 &  -4.8825 &   1.160 & 53.1975 \\
+900   &  143.312 & 1.00 & 0.61 &  -4.2934 &   0.960 & 49.5287 \\
+1000  &  159.236 & 1.00 & 0.65 &  -3.7417 &   0.824 & 47.2357 \\
+1148  &  182.803 & 1.00 & 0.69 &  -3.2230 &   0.664 & 43.6971 \\
+2000  &  318.471 & 1.00 & 0.83 &  -1.6184 &   0.264 & 30.2675 \\
+3000  &  477.707 & 1.00 & 0.90 &  -0.9151 &   0.128 & 22.0127 \\
+4000  &  636.943 & 1.00 & 0.92 &  -0.7242 &   0.075 & 17.2433 \\
+5000  &  796.178 & 1.00 & 0.94 &  -0.5374 &   0.050 & 14.3312 \\
+6000  &  955.414 & 1.00 & 0.94 &  -0.5374 &   0.036 & 12.3822 \\
+7000  & 1114.650 & 1.00 & 0.96 &  -0.3546 &   0.027 & 10.8344 \\
+8000  & 1273.885 & 1.00 & 0.98 &  -0.1755 &   0.020 &  9.1720 \\
+9000  & 1433.121 & 1.00 & 0.99 &  -0.0873 &   0.015 &  7.9452 \\
+10000 & 1592.357 & 1.00 & 0.99 &  -0.0873 &   0.013 &  7.6815 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
-\begin{figure}[H]
-	\centering
-		\includegraphics[width=1.0\textwidth]{img/sim.eps}
-	\caption{Respuesta temporal en simulación del sistema en lazo cerrado con $K_p=3.18$ para $r=\pi\ [rad]$.}
-	\label{fig:sim}
-\end{figure}
 
-\begin{figure}[H]
-	\centering
-		\includegraphics[width=1.0\textwidth]{img/exp.eps}
-	\caption{Respuesta temporal experimental del sistema en lazo cerrado con $K_p=3.18$ para $r=\pi\ [rad]$.}
-	\label{fig:exp}
-\end{figure}
-
-Para tener derecho a examen ordinario es necesario tener el $80\left[\%\right]$ de asistencia \citep{urlREUAQ2026}.
-
-Cada miembro del equipo (en orden alfabético tal y como aparecen en la portada del reporte) discute los resultados.
+\subsection{Resultados Teóricos}
 
 \subsection{\EstudianteA}
 En la Figura...
@@ -383,17 +498,12 @@ En la Figura...
 En la Figura...
 
 \subsection{\EstudianteC}
-
-Los datos del Cuadro \ref{tab:filtro_pasabajas} muestran que, para frecuencias bajas (de $10\,[\frac{rad}{s}]$ a $60\,[\frac{rad}{s}]$), la amplitud de salida se mantuvo prácticamente igual a la de entrada, con una ganancia de $0\,[dB]$ y un desfase cercano a $0\,[^ \circ]$, lo cual confirma que el filtro deja pasar sin atenuación las componentes de baja frecuencia. Conforme la frecuencia aumentó, la amplitud de salida decreció de forma progresiva: en $\omega=1000\,[\frac{rad}{s}]$ la ganancia ya era de $-2.73\,[dB]$, y en el punto más alto medido ($\omega=10000\,[\frac{rad}{s}]$) la salida cayó hasta $0.15\,[V]$, equivalente a una atenuación de $-16.48\,[dB]$. 
-
-Un punto relevante es $\omega=1148\,[\frac{rad}{s}]$ ($f = 182.8\,[Hz]$), donde la ganancia medida fue de $-3.223\,[dB]$ y el desfase de $-43.70\,[^\circ]$. Estos valores son muy cercanos a los $-3\,[dB]$ y $-45\,[^\circ]$ que, teóricamente definen la frecuencia de corte. 
-
-El Cuadro \ref{tab:filtro_pasaaltas} exhibe el comportamiento inverso: a bajas frecuencias la señal se atenúa fuertemente (en $\omega = 10\,[\frac{rad}{s}]$, $v_o = 0.02\,[V]$, ganancia = $-33.98\,[dB]$) y el desfase es cercano a $+90\,[^\circ]$ ($94.01\,[^\circ]$ medido), congruente con el adelanto de fase característico de un pasa altas. A medida que la frecuencia crece, la atenuación disminuye y el desfase se reduce: en $\omega = 1148\,[\frac{rad}{s}]$ la ganancia es de $-3.223\,[dB]$ con un desfase de $43.70\,[^\circ]$, coincidiendo con el mismo punto de corte identificado en el filtro pasa bajas. Para frecuencias altas ($\omega \ge 2000\,[\frac{rad}{s}]$) la ganancia se aproxima a $0 \,[dB]$ (en $\omega = 10 000 \,[\frac{rad}{s}]$, $v_o = 0.99\,[V]$, $-0.0873\,[dB]$) y el desfase tiende a $0\,[^\circ]$, tal como predice el modelo teórico $\phi = 90\,[^\circ]-\arctan(\frac{\omega}{a})$.
+En la Figura...
 
 \subsection{\EstudianteD}
 En la Figura...
 
-\subsection{\EstudianteE}
+\subsection{\EstudianteE} %Calli
 En la Figura...
 
 \subsection{\EstudianteF}
@@ -403,35 +513,24 @@ En la Figura...
  
 \subsection{Resultados y discusión del equipo}
 
-Se escribe la discusión de los resultados de manera colectiva o del equipo. En la Figura \ref{fig:sim} se puede observar en simulación un tiempo de levantamiento $t_r=0.08454\ [s]$ y un sobrepaso $M_p=76.92\ [\%]$ mientras que de manera experimental (ver Figura \ref{fig:exp}) se obtuvo un tiempo de levantamiento $t_r=0.08431\ [s]$ y un sobrepaso $M_p=76.98\ [\%]$.
 
 
 
 \section{Conclusiones}
 Cada miembro del equipo (en orden alfabético tal y como aparecen en la portada del reporte) escribe sus conclusiones.
 
-\subsection{Conclusiones EstudianteA}
-En la Figura...
+\subsection{Arvizu Pérez Pedro}
+En esta práctica...
+ 
 
-\subsection{Conclusiones EstudianteB}
-En la Figura...
+\subsection{Barrera López Daniel}
+En esta práctica...
 
-\subsection{Conclusiones EstudianteC}
+\subsection{Galicia Rocha Sandra}
+En esta práctica...
 
-En esta práctica se logró comprobar experimentalmente el comportamiento en frecuencia de los filtros RC pasa bajas y pasa altas de primer orden, obteniendo curvas de ganancia y fase que coinciden de manera cercana con el modelo teórico desarrollado a partir de la función de transferencia $G(s) = \frac{a}{(s+a)}$. La frecuencia de corte experimental, identificada en ambos filtros alrededor de $\omega = 1148\,[\frac{rad}{s}]$ (donde la ganancia cae a $-3\,[dB]$ y la fase alcanza $\pm 45\,[^\circ]$), validó el criterio teórico $a = \frac{1}{RC}$ y permitió confirmar la relación complementaria entre ambas configuraciones del mismo circuito RC.
-
-Durante el desarrollo de la práctica, uno de los principales obstáculos fue la medición precisa del retardo temporal ($\Delta t$) entre la señal de entrada y la de salida a frecuencias altas, donde los intervalos de tiempo se volvían del orden de decenas de microsegundos; esto se resolvió ajustando la escala de tiempo del osciloscopio y usando sus cursores con mayor resolución en cada medición.
-
-Otro reto importante fue minimizar la resistencia de contacto en las conexiones del circuito; esto se solucionó soldando directamente las terminales de la resistencia y el capacitor, lo cual redujo notablemente el ruido y mejoró la repetibilidad de las mediciones.
-
-\subsection{Conclusiones EstudianteD}
-En la Figura...
-
-\subsection{Conclusiones EstudianteE}
-En la Figura...
-
-\subsection{Conclusiones EstudianteF}
-En la Figura...
+\subsection{Mateos Rico Juan Carlos}
+ En esta práctica...
  
 \subsection{Conclusiones del equipo}
 Se escriben las conclusiones colectivas o del equipo. En esta práctica...
